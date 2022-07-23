@@ -1,0 +1,50 @@
+<!--miniprogram/pages/boss/xylog/xylog.wxml-->
+<!-- <text>miniprogram/pages/boss/xylog/xylog.wxml</text> -->
+<view class="wrap-b">
+	<view class="background"></view>
+  <scroll-view class="scroll-view" scroll-y="true" >
+  <view class="bar-list trainer-list">
+  <view wx:for="{{logrecord}}" wx:key="Id">
+  
+				<view class="padding-lr margin-top">
+					<view class="flex flex-wrap">
+						<view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> {{item.nick_name}}
+							</view>
+						</view>
+						<view class="cu-list grid col-4">
+							<view class="cu-item">
+								<view class="text-black">{{item.total}}
+								</view>
+								<text>节课/总计</text>
+							</view>
+							<view class="cu-item">
+								<view class="text-black">{{item.res_class_num}}
+								</view>
+								<text>节课/剩余</text>
+							</view>
+              <view class="cu-item">
+								<view class="text-black">{{item.weeknum}}
+								</view>
+								<text>节课/过去一周</text>
+							</view>
+              <view class="cu-item">
+								<view class="text-black">{{item.monthnum}}
+								</view>
+								<text>节课/过去一月</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			
+  <!-- 给出教练名字 -->
+  <!-- <button bindtap="clickMe">{{item.name}}</button> -->
+    <!-- <text>名字：{{item.nick_name}};剩余课程{{item.res_class_num}}；一共上了{{item.total}}节课</text> -->
+  </view>
+  </view>
+  </scroll-view>
+ </view>
+
+
+

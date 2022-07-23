@@ -1,0 +1,50 @@
+
+<!-- <view wx:for="{{namelist}}" wx:key="Id">
+  <view wx:if="{{item.res_class_num}}">{{item.nick_name}},目前剩有{{item.res_class_num}}节课</view>
+  <view wx:else>{{item.nick_name}}目前剩有0节课</view>
+  
+</view> -->
+
+<view class="wrap-b">
+  <view class="background"></view>
+<scroll-view class="scroll-view" scroll-y="true">
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="bar-list">
+  <view class="graySpace"></view>
+  <view class="table">
+  <block wx:for="{{namelist}}" wx:key="{{code}}" class="block">
+    <view class="tr bg-g solid-bottom">
+      <view class="td">{{item.nick_name}}</view>
+      <view class="td">剩余{{item.res_class_num}}</view>
+
+      <view>
+        <input placeholder-class="place-holder"  placeholder="添加" bindinput='addup' value="{{text}}" style="font-size: 14px;" data-openid="{{item.openid}}"/>
+          <view class="clear"><text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;">{{current}}</text></view>
+      </view>
+
+      <view>
+        <input placeholder-class="place-holder"  placeholder="设置" bindinput='setup' value="{{text}}" style="font-size: 14px;" data-openid="{{item.openid}}"/>
+      </view>
+
+      <view>
+        <button size='mini' class='button1' bindtap="Check_confirm" data-openid="{{item.openid}}" data-nickname="{{item.nick_name}}" formType='reset'>Check</button>
+      </view>
+
+    </view>
+  </block>
+</view>
+<view class="graySpace"></view>
+  <view class="graySpace"></view>
+<view class="notice">注：添加是在当前课时基础上添加课时数，设置是直接将剩余课时设置为键入的数字，如果添加和设置同时都填写，以设置为准</view>
+  </view>
+</scroll-view>
+<view class='placeholder-view'></view>
+
+
+
+</view>
+
+

@@ -1,0 +1,118 @@
+<!--miniprogram/pages/boss/add_gym_pic/add_gym_pic.wxml-->
+<!-- <text>miniprogram/pages/boss/add_gym_pic/add_gym_pic.wxml</text> -->
+<view class="wrap-b">
+  <view class="background"></view>
+
+  <view class="bar-list">
+
+
+
+    <view class="padding-lr margin-top">
+      <view class="images_box">
+        <block wx:key="imgbox" wx:for="{{imgbox}}">
+          <view class='img-box'>
+            <image class='img' src='{{item}}'></image>
+            <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+              <image class='img' src='delete2.png'></image>  
+            </view>
+          </view>
+        </block>
+
+        <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<5}}">
+          <image class='img' src='m1.png'></image>  
+        </view>
+        <button bindtap='fb' class="cu-btn" style="width:80%;">上传健身房介绍照片</button>
+      </view>
+    </view>
+
+
+
+
+
+
+
+    <view class="padding-lr margin-top">
+      <view class="images_box">
+        <block wx:key="actbox" wx:for="{{actbox}}">
+          <view class='img-box'>
+            <image class='img' src='{{item}}'></image>
+            <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+              <image class='img' src='delete2.png'></image>  
+            </view>
+          </view>
+        </block>
+
+        <view class='img-box' bindtap='actaddPic1' wx:if="{{actbox.length<5}}">
+          <image class='img' src='m1.png'></image>  
+        </view>
+        <button bindtap='actfb' class="cu-btn" style="width:80%;">上传图片</button>
+      </view>
+      
+      </view>
+      <text style="padding-left:10px; " >注意：如果上传会自动删除之前上传的照片</text>
+    </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<view class='pages'>
+  <view class='top'><text class='top_name'>健身房介绍照片：</text></view>
+  <view class="images_box">
+    <block wx:key="imgbox" wx:for="{{imgbox}}">
+      <view class='img-box'>
+        <image class='img' src='{{item}}'></image>
+        <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
+        <image class='img' src='delete2.png'></image>  
+        </view>
+      </view>
+    </block>
+    <view class='img-box' bindtap='addPic1' wx:if="{{imgbox.length<5}}">
+      <image class='img' src='m1.png'></image>  
+    </view>
+  </view>
+  <button bindtap='fb'>上传图片</button>
+  <text>注意：如果上传会自动删除之前上传的照片</text>
+
+
+
+
+
+  <view class='top'><text class='top_name'>健身房活动照片：</text></view>
+  <view class="images_box">
+    <block wx:key="actbox" wx:for="{{actbox}}">
+      <view class='img-box'>
+        <image class='img' src='{{item}}'></image>
+        <view class='img-delect' data-deindex='{{index}}' bindtap='actDelete1'>
+        <image class='img' src='delete2.png'></image>  
+        </view>
+      </view>
+    </block>
+    <view class='img-box' bindtap='actaddPic1' wx:if="{{actbox.length<5}}">
+      <image class='img' src='m1.png'></image>  
+    </view>
+  </view>
+  <button bindtap='actfb'>上传图片</button>
+  <text>注意：如果上传会自动删除之前上传的照片</text>
+</view> -->
+
+
+

@@ -1,0 +1,17 @@
+/* miniprogram/pages/boss/check_status/check_status.wxss */
+@import '../../../utils/background.wxss';
+@import '../../trainees/trainees.wxss';
+
+.wrap-b{
+  background-color: transparent;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+
+
+
+
+
+

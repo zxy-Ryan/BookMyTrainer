@@ -1,0 +1,89 @@
+/* miniprogram/pages/boss/add_class/add_class.wxss */
+@import '../../../utils/background.wxss';
+
+.table {
+  border: 0px solid darkgray;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 3rem;
+  align-items: center;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: transparent;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  background: #3366FF;
+  color: #fff;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+
+.button1 {
+  width: 20rpx;
+  font-size: 10px;
+  background-color: #ff9933;
+} /* Green */
+
+.button2{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  background-color: white;
+  color: #999999;
+  border-radius: 0rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+}
+
+.wrap-b{
+  background-color: transparent;
+  width: 100%;
+  min-height: 100%;
+}
+
+.bar-list{
+  background: rgba(242, 242, 242, 0.7);
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.scroll-view{
+  height: 100%;
+}
+
+.graySpace{
+  padding-left: 40rpx;
+  background: transparent;
+  font-size: 12px;
+  min-height: 30rpx;
+}
+
+.place-holder{
+  color: rgb(99, 98, 98);
+}
+
+.notice{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}

@@ -1,0 +1,138 @@
+/* pages/trainees/trainees.wxss */
+@import '../../utils/background.wxss';
+.usermotto {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.wrap-b{
+  background-color: transparent;
+  width: 100%;
+  min-height: 100%;
+}
+
+
+
+.btn-title{
+  color: #ff9933;
+  font-size: 50rpx;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  width: 100%;
+}
+
+.uploader-text{
+  text-align: center;
+}
+
+.btn-name{
+  color: white;
+}
+
+.btn-cancel{
+  background-color: orange;
+  width: 100%;
+}
+
+.graySpace{
+  padding-left: 40rpx;
+  background: transparent;
+  font-size: 12px;
+  min-height: 30rpx;
+}
+
+.bar-list{
+  background: rgba(242, 242, 242, 0.8);
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  border-radius: 10px;
+}
+
+.scroll-view{
+  height: 100%;
+}
+
+.cuIcon-roundright{
+  color: black;
+  font-size: 50rpx;
+  font-weight: 100;
+}
+
+.userinfo-avatar {  
+  overflow:hidden;  
+  display: block;  
+  border-radius: 50%;  
+  position: absolute;
+  left: 30rpx;
+  top: 15rpx;
+  width: 150rpx;
+  height: 150rpx;
+} 
+
+.item-avatar-lg,.item-avatar-md,.item-avatar-sm,.item-avatar-xs{
+  display: flex;
+  padding: 20rpx 30rpx;
+  border-bottom: 3rpx solid gray;
+  cursor: pointer;
+  position:relative;
+}
+
+.item-avatar-xs image{
+  float: left;
+  width: 65rpx;
+  height: 65rpx;
+  box-sizing: border-box
+}
+
+.item-avatar-lg .item-text,.item-avatar-md .item-text,.item-avatar-sm .item-text,.item-avatar-xs .item-text{
+  padding-left: 10px;
+}
+
+.title{
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+  color: black;
+}
+
+.bottom-notice{
+  position:fixed; 
+  bottom:0;
+}
+
+.padding-lr{
+  width: 100%;
+}
+
+.flex-wrap{
+  width: 100%;
+}
+
+.cu-bar{
+  width: 100%;
+}
+
+.action{
+  width: 100%;
+}
+
+.grid{
+  width: 100%;
+}
+
+.text-black{
+  font-size: 60rpx;
+}
+
+.cu-btn{
+  background-color: orange;
+  
+}
+
+.btn-nav{
+  width: 100%;
+}
+
+.place-holder{
+  color: black;
+}

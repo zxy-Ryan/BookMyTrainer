@@ -1,0 +1,21 @@
+<!--miniprogram/pages/boss/updatekey/updatekey.wxml-->
+<!-- <text>miniprogram/pages/boss/updatekey/updatekey.wxml</text> -->
+
+<form bindsubmit="formSubmit">
+  <view style="border: 1px solid #FFA6A6; border-radius: 10px;flex-wrap: true;">
+    <input placeholder-class="place-holder"  placeholder="键入学员秘钥：" bindinput='xyinput' value="{{xytext}}" style="font-size: 14px;padding-left:10px"/>
+    <view class="clear">
+      <text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;padding-left:10px">{{current}} </text>
+      <text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;padding-left:10px">当前学员秘钥：{{xykey}} </text>
+    </view>
+  </view>
+
+  <view style="border: 1px solid #FFA6A6; border-radius: 10px;flex-wrap: true;">
+    <input placeholder-class="place-holder"  placeholder="键入教练秘钥：" bindinput='jlinput' value="{{jltext}}" style="font-size: 14px;padding-left:10px"/>
+    <view class="clear"><text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;padding-left:10px">{{current}} </text></view>
+    <text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;padding-left:10px">当前教练秘钥：{{jlkey}} </text>
+  </view>
+  <button form-type="submit">提交</button>
+
+</form>
+<text>如需更改请点击下方提交按钮</text>

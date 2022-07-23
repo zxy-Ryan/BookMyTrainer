@@ -1,0 +1,44 @@
+<!--miniprogram/pages/trainees/Cancel/Cancel.wxml-->
+<!-- <text>miniprogram/pages/trainees/Cancel/Cancel.wxml</text>
+
+<view wx:for="{{appointlist}}" wx:key="Id">
+    <button bindtap="cancelclick" data-time='{{item.time}}' data-timeperiod='{{item.timeperiod}}'>{{item.timeperiod}}</button>
+
+</view> -->
+
+
+
+<scroll-view scroll-x="true" class='scrollClass'>
+  <view class='table'>
+    <view class='table_header'>
+      <view class="th" style='width:130rpx;background-color:white'>
+        <view class='centerclass cell_label'>排班</view>
+      </view>
+      <block wx:for="{{dateArray}}"  wx:key="Id">
+        <view class='th'>
+          <view class="cell_label centerclass">{{item.weekName}}</view>
+          <view class="cell_date_label centerclass">{{item.date_text}}</view>
+        </view>
+      </block>
+    </view>
+
+    <block wx:for="{{sch_listData}}"  wx:key="Id">
+      <view class='table_main'>
+        <view class='td' style='width:130rpx;background-color:white;'>
+          <view class="cell_label centerclass">{{item.time_title}}</view>
+        </view>
+
+
+        <view wx:for="{{[0,1, 2, 3, 4, 5, 6]}}" wx:for-item="i"  wx:key="Id">
+          <view class='td'>
+            <block wx:for="{{item.daily[i]}}" wx:for-item="trade" wx:for-index="ind"  wx:key="Id">
+            
+              <view class='{{trade.length-1==ind? "table_Text_last_class":"table_Text_class"}}' bindtap='cancelclick'  data-time='{{trade.time}}' data-timeperiod='{{trade.timeperiod}}' data-flag='{{trade.available}}'>{{trade.xyname}}</view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</scroll-view>

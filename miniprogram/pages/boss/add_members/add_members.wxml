@@ -1,0 +1,55 @@
+<!--miniprogram/pages/boss/add_members/add_members.wxml-->
+<!-- <text>miniprogram/pages/boss/add_members/add_members.wxml</text> -->
+<!-- <text>点击人名确认身份：{{status}}</text> -->
+<!-- 
+<block wx:for="{{namelist}}">
+  <view bindtap='clickName' data-openid='{{item._openid}}' data-nn='{{item.nick_name}}' data-status='{{item.status}}'>
+  {{item.nick_name}},他的真实名字是{{item.memo_name}}
+  </view>
+</block> -->
+
+
+
+
+
+<view class="wrap-b">
+	<view class="background"></view>
+
+
+	<view class="graySpace"></view>
+	<view class="graySpace"></view>
+
+	<!-- <view class="Intro-media__hd" wx:if="{{item.memo_avatarUrl}}" > -->
+	<view>
+
+		<view class="graySpace"></view>
+
+		<scroll-view class="scroll-view" scroll-y="true">
+			<view class="bar-list trainer-list">
+				<view class="padding-lr margin-top">
+					<view class="flex flex-wrap">
+						<view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> 点击人名确认身份
+							</view>
+						</view>
+						<view wx:for="{{namelist}}" wx:key="Id">
+							<view class="item-avatar-xs flex align-center" bindtap='clickName' data-openid='{{item._openid}}' data-nn='{{item.nick_name}}' data-status='{{item.status}}'>
+								<!-- <navigator url="./Reservation/Reservation?openid={{item.openid}}&nick_name={{item.nick_name}}" open-type="navigate" class="uploader-text flex align-center"> -->
+									<view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});">
+									</view>
+									<view style="padding-left:10px;" class="picker flex align-center">
+										<text class="title">{{item.nick_name}}【{{item.memo_name}}】</text>
+									</view>
+								<!-- </navigator> -->
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+		</scroll-view>
+	</view>
+
+
+</view>

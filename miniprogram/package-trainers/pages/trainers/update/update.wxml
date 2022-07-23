@@ -1,0 +1,43 @@
+<view class="wrap-b">
+  <view class="background"></view>
+<view class="bar-list">
+<view class="main">
+    <view class="form-box">
+        <form bindsubmit="formSubmit">
+            <view style="border: 3px solid #ff9933; border-radius: 10px;flex-wrap: true; background-color: white; height:100%;">
+              <input placeholder-class="place-holder"  placeholder="更新您的简介，<200字" name="Intro" maxlength='200' bindinput='limit' value="{{text}}" style="font-size: 14px;"/>
+              <!-- 显示字数 -->
+              <view class="clear"><text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;">{{current}} / {{max}} （最多可写200字）</text></view>
+              <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+            </view>
+            <button form-type="submit" class="btn-save">保存</button>
+            <!-- <input value="{{address.name}}" name="Intro" placeholder="更新您的简介，<100字"/> -->
+        </form>
+    </view>
+</view>
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<view>
+  <view class="section">
+ <view class="section__title">更新简介：{{inputValue}}</view>
+ <input bindinput="bindKeyInput" placeholder="输入简介建议不超过100字"/>
+</view>
+</view> -->
+

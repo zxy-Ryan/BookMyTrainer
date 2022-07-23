@@ -1,0 +1,45 @@
+<!--miniprogram/pages/boss/check_status/check_status.wxml-->
+<!-- <text>miniprogram/pages/boss/check_status/check_status.wxml</text> -->
+
+<view class="wrap-b">
+	<view class="background"></view>
+	<scroll-view class="scroll-view" scroll-y="true">
+		<view class="bar-list trainer-list">
+			<view class="padding-lr margin-top">
+				<view class="flex flex-wrap">
+					<view class="cu-bar solid-bottom margin-top">
+						<view class="action">
+							<text class="cuIcon-title text-orange "></text> 请选择要查看的教练
+						</view>
+					</view>
+					<view wx:for="{{namelist}}" wx:key="Id">
+						<view class="item-avatar-xs flex align-center">
+							<view class="btn uploader-text flex align-center" bindtap="clickMe" data-status='{{status}}' data-openid='{{item.openid}}' wx:if="{{item.memo}}">
+								<view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});">
+								</view>
+								<view style="padding-left:10px;" class="picker flex align-center">
+									<text class="title">{{item.memo}}</text>
+									<text class="cuIcon-roundright" style="padding-left:300rpx;"></text>
+								</view>
+							</view>
+							<view class="btn uploader-text flex align-center" bindtap="clickMe" data-status='{{status}}' data-openid='{{item.openid}}' wx:else>
+								<view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});">
+								</view>
+								<view style="padding-left:10px;" class="picker flex align-center">
+									<text class="title">{{item.nick_name}}</text>
+									<text class="cuIcon-roundright" style="padding-left:300rpx;"></text>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+			<!-- <view wx:for="{{namelist}}" wx:key="Id">
+      <button class="btn" bindtap="clickMe" data-status='{{status}}' data-openid='{{item.openid}}' wx:if="{{item.memo}}">{{item.memo}}</button>
+      <button class="btn" bindtap="clickMe" data-status='{{status}}' data-openid='{{item.openid}}' wx:else>{{item.nick_name}}</button>
+</view> -->
+		</view>
+		<view class='placeholder-view'></view>
+	</scroll-view>
+
+</view>

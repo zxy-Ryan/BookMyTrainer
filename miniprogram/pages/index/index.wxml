@@ -1,0 +1,125 @@
+<!--index.wxml-->
+
+<!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class='login-btn'>微信登录</button> -->
+
+
+<view class="wrap-b">
+<view class="background"></view>
+
+<view class="main">
+  <view class="header">
+        <view class="userinfo-avatar">
+          <open-data type="userAvatarUrl" ></open-data>
+        </view>
+        <view class="userinfo-nickname">
+          <view class="name-text" style="padding-top:9px;">
+            <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" size="mini"> 点我!! 授权登录 </button> 
+            {{userInfo.nickName}}
+          </view>
+          <!-- <view class="order-login"> -->
+                  
+          <!-- </view>  -->
+          <view class="name-userID"  style="padding-top:14px;">必健身，必诚心</view>
+        </view>
+        
+        
+
+          
+  </view>
+</view>
+
+
+
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+<scroll-view class="scroll-view" scroll-y="true">
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+
+
+
+  <view class="bar-list">
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="clicktrainees" data-status='{{status}}'>
+      <image src="/images/icons8-exercise-64.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">我是会员</text>
+        <text class="cuIcon-roundright" style="padding-left:120px; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="clicktrainers" data-status='{{status}}' data-nickname='{{userInfo.nickName}}' data-openid='{{openid}}'>
+      <image src="/images/icons8-training-64.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+          <text class="title">我是教练</text>
+          <text class="cuIcon-roundright" style="padding-left:120px; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="clickMe"  data-openid='{{openid}}' data-nickname='{{userInfo.nickName}}'>
+      <image src="/images/icons8-statistics-64.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">我是老板</text>
+        <text class="cuIcon-roundright" style="padding-left:120px; padding-top:5px;"></text>
+      </view>
+    </view>
+
+  </view>
+  </view>
+</scroll-view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <view>
+  <view class="usermotto">
+      <button bindtap="clicktrainees" data-status='{{status}}'>我是学员</button>
+  </view>  
+  <view class="usermotto"> 
+      <button bindtap="clicktrainers" data-status='{{status}}' data-nickname='{{userInfo.nickName}}' data-openid='{{openid}}'>我是教练</button>
+  </view>
+  <view class="usermotto"> 
+      <button bindtap="clickMe"  data-openid='{{openid}}' data-nickname='{{userInfo.nickName}}'>我是健身房Boss</button>
+  </view>
+
+
+  <view class="cu-bar bg-white margin-top">
+  <view class='action'>
+    <text class='cuIcon-title text-blue'></text>弹框加载
+    <text class='cuIcon-right text-blue'></text>
+  </view>
+  <view class='action'>
+    <button class='cu-btn bg-green shadow' bindtap='loadModal' size='mini'>
+      点我
+    </button>
+  </view>
+</view> -->
+ 
+</view>

@@ -1,0 +1,155 @@
+<!--miniprogram/pages/boss/boss.wxml-->
+
+<view class="wrap-b">
+<view class="background"></view>
+
+
+<view class="bar-list">
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="confirmjl">
+      <image src="/images/check.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">认证健身教练</text>
+        <text class="cuIcon-roundright" style="padding-left:210rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="confirmxy">
+      <image src="/images/check.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">认证学员</text>
+        <text class="cuIcon-roundright" style="padding-left:270rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="addxyclass">
+      <image src="/images/open.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">给学员开课</text>
+        <text class="cuIcon-roundright" style="padding-left:240rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="deletexyjl">
+      <image src="/images/delete.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">删除学员教练</text>
+        <text class="cuIcon-roundright" style="padding-left:210rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="checkjllog">
+      <image src="/images/log.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">查看教练日志</text>
+        <text class="cuIcon-roundright" style="padding-left:210rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="checkxylog">
+      <image src="/images/log.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">查看学员日志</text>
+        <text class="cuIcon-roundright" style="padding-left:210rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="checkgymlog">
+      <image src="/images/log.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">查看场馆日志</text>
+        <text class="cuIcon-roundright" style="padding-left:210rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="addgympic">
+      <image src="/images/picture.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">添加场馆照片</text>
+        <text class="cuIcon-roundright" style="padding-left:210rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="updatekey">
+      <image src="/images/key.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">更改申请秘钥</text>
+        <text class="cuIcon-roundright" style="padding-left:210rpx; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+</view>
+
+
+
+
+<!-- 
+  <view class="usermotto"> 
+    <navigator url="./add_members/add_members?status=2" open-type="navigate" class="uploader-text">
+      <button bindtap="clickMe">认证健身教练</button>
+    </navigator>
+  </view>
+
+
+  <view class="usermotto"> 
+    <navigator url="./add_members/add_members?status=1" open-type="navigate" class="uploader-text">
+      <button bindtap="clickMe">认证学员</button>
+    </navigator>
+  </view>
+
+  <view class="usermotto"> 
+    <navigator url="./add_class/add_class" open-type="navigate" class="uploader-text">
+      <button bindtap="clickMe">给学员开课</button>
+    </navigator>
+  </view>
+
+  <view class="usermotto"> 
+    <navigator url="./Delete/Delete" open-type="navigate" class="uploader-text">
+      <button bindtap="clickMe">删除学员 & 教练</button>
+    </navigator>
+  </view>
+
+  <view class="usermotto"> 
+    <navigator url="./check_status/check_status?status=2" open-type="navigate" class="uploader-text">
+      <button bindtap="clickMe">查看教练日志</button>
+    </navigator>
+  </view>
+
+  <view class="usermotto"> 
+    <navigator url="./xylog/xylog" open-type="navigate" class="uploader-text">
+      <button bindtap="clickMe">查看学员日志</button>
+    </navigator>
+  </view>
+
+  <view class="usermotto"> 
+    <navigator url="./Occupany/Occupany" open-type="navigate" class="uploader-text">
+      <button bindtap="CheckOccupancy">查看健身房未来一周使用情况</button>
+    </navigator>
+  </view>
+
+  <view class="usermotto"> 
+    <navigator url="./Occupany/Occupany" open-type="navigate" class="uploader-text">
+      <button bindtap="CheckOccupancy">添加健身房照片及活动照片</button>
+    </navigator>
+  </view>
+  </view> -->

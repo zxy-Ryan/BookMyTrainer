@@ -1,0 +1,2 @@
+/* miniprogram/pages/index/register.wxss */
+@import '../../../utils/background.wxss';

@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/firstpage/firstpage",
+    "pages/trainees/trainees",
+    "pages/index/index",
+    "pages/boss/boss",
+    "pages/logs/logs",
+    "pages/trainees/Reservation/Reservation",
+    "pages/boss/check_status/check_status",
+    "pages/index/register/register",
+    "pages/boss/add_members/add_members",
+    "pages/trainees/Cancel/Cancel",
+    "pages/boss/check_status/Person/Person",
+    "pages/boss/Occupany/Occupany",
+    "pages/boss/add_class/add_class",
+    "pages/boss/Delete/Delete",
+    "pages/boss/check_status/xylog/xylog",
+    "pages/boss/xylog/xylog",
+    "pages/index/firstpage/Intro_main/Intro_main",
+    "pages/trainers-intro/Introduction",
+    "pages/boss/add_gym_pic/add_gym_pic",
+    "pages/boss/updatekey/updatekey"
+  ],
+  "subpackages": [
+    {
+      "root": "package-trainers",
+      "pages": [
+        "pages/trainers/trainers",
+        "pages/trainers/Cancel/Cancel",
+        "pages/trainers/update/update",
+        "pages/trainers/update/test/test"
+      ]
+    }
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#7A7E83",
+    "selectedColor": "#E67E22",
+    "borderStyle": "black",
+    "backgroundColor": "#D6DBDF",
+    "list": [
+      {
+        "pagePath": "pages/index/firstpage/firstpage",
+        "iconPath": "images/icons8-home-page-64.png",
+        "selectedIconPath": "images/icons8-home-page-64-selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/trainers-intro/Introduction",
+        "iconPath": "images/icons8-task-64.png",
+        "selectedIconPath": "images/icons8-task-64-selected.png",
+        "text": "教练"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icons8-customer-64.png",
+        "selectedIconPath": "images/icons8-customer-64-selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#D6DBDF",
+    "navigationBarTitleText": "必健身预约系统",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "debug": false
+}

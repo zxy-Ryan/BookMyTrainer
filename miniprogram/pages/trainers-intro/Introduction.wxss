@@ -1,0 +1,103 @@
+/* miniprogram/pages/trainers/Introduction.wxss */
+@import '../../utils/background.wxss';
+.Intro-media {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30rpx;
+  overflow: hidden
+}
+.Intro-media__hd {
+  margin-right: .8em;
+  text-align: center
+}
+.Intro-media__thumb {
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top
+}
+.Intro-media__bd {
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 0
+}
+.Intro-media__title {
+  font-weight: 400;
+  font-size: 34rpx;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal
+}
+.Intro-media__desc {
+  color: rgba(0,0,0,.45);
+  font-size: 26rpx;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical
+}
+
+.exam-body {
+  transition: height 0.2s; 
+  height: 480rpx;
+}
+
+.hidden {
+  height: 0;
+}
+
+.screen-swiper {
+	min-height: 375rpx;
+}
+
+.cu-bar{
+  width: 100%;
+  background-color: rgba(84, 84, 84, 0.45);
+}
+
+.cu-card{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrap-b{
+  background-color: transparent;
+  width: 100%;
+  min-height: 100%;
+}
+
+.cu-tag{
+  background-color: rgba(243, 121, 27, 0.51);
+}
+
+.intro-text{
+display: -webkit-box;
+overflow: hidden;
+text-overflow: ellipsis;
+word-wrap: break-word;
+white-space: normal !important;
+-webkit-line-clamp: 1;
+-webkit-box-orient: vertical;
+}
+
+.textMore {
+  display: flex;
+}
+
+.placeholder-view {
+  width: 100%;
+  height: 150rpx;
+}
+
+.screen-swiper{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}

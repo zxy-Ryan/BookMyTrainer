@@ -1,0 +1,34 @@
+<!--miniprogram/pages/index/register.wxml-->
+<!-- <input bindinput='iName' type='text' placeholder="请输入暗号..." auto-focus/> -->
+
+
+<!-- <view class="wrap-b">
+<view class="background"></view> -->
+
+
+<!-- <form bindsubmit="formSubmit">
+  <view style="border: 1px solid #FFA6A6; border-radius: 10px;flex-wrap: true;">
+    <input placeholder-class="place-holder"  placeholder="请输入暗号..." bindinput='limit' value="{{text}}" style="font-size: 14px;"/>
+    <view class="clear"><text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;">{{current}} </text></view>
+    <button form-type="submit">提交</button>
+  </view>
+</form> -->
+<!-- </view> -->
+
+
+<form bindsubmit="formSubmit">
+  <view style="border: 1px solid #FFA6A6; border-radius: 10px;flex-wrap: true;">
+    <input placeholder-class="place-holder"  placeholder="键入暗号：" bindinput='keyinput' value="{{key}}" style="font-size: 14px;padding-left:10px"/>
+    <view class="clear">
+      <text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;padding-left:10px">{{current}} </text>
+    </view>
+  </view>
+
+  <view style="border: 1px solid #FFA6A6; border-radius: 10px;flex-wrap: true;">
+    <input placeholder-class="place-holder"  placeholder="请输入您的真实姓名：" bindinput='memonameinput' value="{{memo_name}}" style="font-size: 14px;padding-left:10px"/>
+    <view class="clear"><text style="color: #ccc; font-size: 14px; float: right; margin-right: 2%;padding-left:10px">{{current}} </text></view>
+  </view>
+  <button form-type="submit">提交</button>
+
+</form>
+<text>如需更改请点击下方提交按钮</text>

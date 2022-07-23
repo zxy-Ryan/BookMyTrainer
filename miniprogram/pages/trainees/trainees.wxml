@@ -1,0 +1,102 @@
+<!--pages/trainees/trainees.wxml-->
+
+
+
+<!--index.wxml-->
+<view class="wrap-b">
+	<view class="background"></view>
+
+
+	<view class="graySpace"></view>
+	<view class="graySpace"></view>
+
+	<!-- <view class="Intro-media__hd" wx:if="{{item.memo_avatarUrl}}" > -->
+	<view>
+
+		<view class="graySpace"></view>
+
+		<scroll-view class="scroll-view" scroll-y="true" >
+			<view class="bar-list trainer-list"  wx:if="{{res_class>0}}">
+				<view class="padding-lr margin-top">
+					<view class="flex flex-wrap">
+						<view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> 请pick你的教练
+							</view>
+						</view>
+						<view wx:for="{{namelist}}" wx:key="Id">
+							<view class="item-avatar-xs flex align-center">
+								<navigator url="./Reservation/Reservation?openid={{item.openid}}&nick_name={{item.nick_name}}" open-type="navigate" class="uploader-text flex align-center">
+									<view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});">
+									</view>
+									<view style="padding-left:10px;" class="picker flex align-center">
+										<text class="title">{{item.nick_name}}</text>
+										<text class="cuIcon-roundright" style="padding-left:300rpx;"></text>
+									</view>
+								</navigator>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+      <view class="bar-list trainer-list"  wx:else>
+          <view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> 注意
+							</view>
+					</view>
+		    <view class="action" style="padding-left:10rpx;">经过您一顿猛如虎的操作，您的课已用完，快联系Boss续上几节吧</view>
+	    </view>
+
+			<view class="bar-list trainer-list">
+				<view class="padding-lr margin-top">
+					<view class="flex flex-wrap">
+						<view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> 训练记录
+							</view>
+						</view>
+						<view class="cu-list grid col-4">
+							<view class="cu-item">
+								<view class="text-black">{{weeknum}}
+								</view>
+								<text>节课/上周</text>
+							</view>
+							<view class="cu-item">
+								<view class="text-black">{{monthnum}}
+								</view>
+								<text>节课/上月</text>
+							</view>
+							<view class="cu-item">
+								<view class="text-black">{{total}}
+								</view>
+								<text>节课/总计</text>
+							</view>
+							<view class="cu-item">
+								<view class="text-black">{{res_class}}
+								</view>
+								<text>节课/剩余</text>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="usermotto">
+				<navigator url="./Cancel/Cancel?openid={{openid}}" open-type="navigate" class="uploader-text btn-nav">
+					<button bindtap="clickMe" class="cu-btn" style="width:80%;">我要取消</button>
+				</navigator>
+			</view>
+
+		</scroll-view>
+	</view>
+
+
+	
+
+
+
+
+
+</view>

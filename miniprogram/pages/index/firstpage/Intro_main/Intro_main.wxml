@@ -1,0 +1,5 @@
+miniprogram/pages/index/firstpage/Intro_main/Intro_main.wxml
+<!-- 
+<image class="logo__img" mode='widthFix' src='../../../../images/room2.jpg'></image>
+<image class="logo__img" mode='widthFix' src='../../../../images/room3.jpg'></image>
+<image class="logo__img" mode='widthFix' src='../../../../images/room4.jpg'></image> -->

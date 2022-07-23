@@ -1,0 +1,15 @@
+/* miniprogram/pages/trainers/update/update.wxss */
+@import '../../../../pages/index/index.wxss';
+
+.form-box{
+    padding-top: 30rpx;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    height: 100%;
+}
+
+.btn-save{
+    margin-top: 30rpx;
+    background-color: #ff9933;
+    width: 100%;
+}

@@ -1,0 +1,213 @@
+<!--pages/trainers/trainers.wxml-->
+
+<view class="main">
+
+<view class="background"></view>
+<!-- <view class="uploader">
+      <text>{{nick_name}}</text>
+</view> -->
+
+<view class="header">
+        <view class="userinfo-avatar">
+          <open-data type="userAvatarUrl" style="width:100px;"></open-data>
+        </view>
+        <view class="userinfo-nickname">
+        <view class="name-text" style="padding-top:10px;">{{nick_name}} 教头</view>
+        <view class="name-userID" style="padding-top:15px;">必健身，必诚心</view>
+        </view> 
+  </view>
+
+
+<scroll-view class="scroll-view" scroll-y="true">
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+  <view class="graySpace"></view>
+
+
+
+  <view class="bar-list">
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="updatepic">
+      <image src="/images/picture.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">更新个性照片</text>
+        <text class="cuIcon-roundright" style="padding-left:100px; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="updateIntro">
+      <image src="/images/introduction.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">编辑个人简介</text>
+        <text class="cuIcon-roundright" style="padding-left:100px; padding-top:5px;"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="padding-lr margin-top">
+    <view class="item-avatar-xs flex align-center" bindtap="showSchedule">
+      <image src="/images/schedule.png"></image>
+      <view style="padding-left:10px; padding-top:5px;" class="picker flex align-center">
+        <text class="title">未来日程</text>
+        <text class="cuIcon-rounddown" style="padding-left:130px; padding-top:5px;" wx:if="{{clicked}}"></text>
+        <text class="cuIcon-roundright" style="padding-left:130px; padding-top:5px;" wx:else></text>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view scroll-x="true" class="scrollClass {{clicked==false?'hidden-scroll':'visible-scroll'}}">
+  <view class='table'>
+    <view class='table_header'>
+      <view class="th" style='width:130rpx;background-color:white'>
+        <view class='centerclass cell_label'>排班</view>
+      </view>
+      <block wx:for="{{dateArray}}"  wx:key="Id">
+        <view class='th'>
+          <view class="cell_label centerclass">{{item.weekName}}</view>
+          <view class="cell_date_label centerclass">{{item.date_text}}</view>
+        </view>
+      </block>
+    </view>
+
+    <block wx:for="{{sch_listData}}"  wx:key="Id">
+      <view class='table_main'>
+        <!--上午下午晚上  -->
+        <view class='td' style='width:130rpx;background-color:white;'>
+          <view class="cell_label centerclass">{{item.time_title}}</view>
+        </view>
+
+
+        <view wx:for="{{[0,1, 2, 3, 4, 5, 6]}}" wx:for-item="i"  wx:key="Id">
+          <view class='td'>
+            <block wx:for="{{item.daily[i]}}" wx:for-item="trade" wx:for-index="ind"  wx:key="Id">
+              <!-- <view class='{{trade.available!=true? "table_Text_last_class":"table_Text_class"}}'>{{trade.xyname}}</view> -->
+              <view class='{{trade.length-1==ind? "table_Text_last_class":"table_Text_class"}}'>{{trade.xyname}}</view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  </scroll-view>
+
+
+  </view>
+</scroll-view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<view class="address-box">
+    <view class="address-manage">
+        <navigator url="./update/test/test">更新个性头像&生活照片</navigator>
+    </view>
+</view>
+
+<view class="address-box">
+    <view class="address-manage">
+        <navigator url="./update/update">更新简介</navigator>
+    </view>
+</view>
+
+
+
+<view class="address-box">
+    <view class="address-manage">
+        未来日程
+    </view>
+</view>
+
+
+
+<view class="bar-list">
+  <view class="padding-lr margin-top">
+    <scroll-view scroll-x="true" class='scrollClass'>
+      <view class='table'>
+        <view class='table_header'>
+          <view class="th" style='width:130rpx;background-color:white'>
+            <view class='centerclass cell_label'>排班</view>
+          </view>
+        <block wx:for="{{dateArray}}"  wx:key="Id">
+          <view class='th'>
+            <view class="cell_label centerclass">{{item.weekName}}</view>
+            <view class="cell_date_label centerclass">{{item.date_text}}</view>
+          </view>
+        </block>
+        </view>
+
+        <block wx:for="{{sch_listData}}"  wx:key="Id">
+          <view class='table_main'>
+            <view class='td' style='width:130rpx;background-color:white;'>
+              <view class="cell_label centerclass">{{item.time_title}}</view>
+          </view>
+
+
+        <view wx:for="{{[0,1, 2, 3, 4, 5, 6]}}" wx:for-item="i"  wx:key="Id">
+          <view class='td'>
+            <block wx:for="{{item.daily[i]}}" wx:for-item="trade" wx:for-index="ind"  wx:key="Id">
+
+              <view class='{{trade.length-1==ind? "table_Text_last_class":"table_Text_class"}}'>{{trade.xyname}}</view>
+            </block>
+          </view>
+        </view>
+      </view>
+        </block>
+
+  </view>
+  </scroll-view>
+  </view>
+</view>
+</view>-->
+
+
+<!-- <view class="address-box">
+    <view class="address-manage">
+        <navigator url="./Cancel/Cancel">批量请假</navigator>
+    </view>
+
+    <view bindtap="showDatePicker" >选择日期</view>
+
+    <date-picker
+    id="date-picker"
+    value="{{datePickerValue}}" 
+    isShow="{{datePickerIsShow}}"
+    bindsureclick="datePickerOnSureClick"
+    bindcancelclick="datePickerOnCancelClick" />
+
+</view> -->
+
+<!-- 
+<button bindtap="showDatePicker" >选择日期</button >
+
+    <date-picker
+    id="date-picker"
+    value="{{datePickerValue}}" 
+    isShow="{{datePickerIsShow}}"
+    bindsureclick="datePickerOnSureClick"
+    bindcancelclick="datePickerOnCancelClick" />
+
+
+
+ -->
+
+
+
+
+
+
+
+

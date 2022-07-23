@@ -1,0 +1,127 @@
+<!--miniprogram/pages/boss/Delete/Delete.wxml-->
+<!-- <text>miniprogram/pages/boss/Delete/Delete.wxml</text> -->
+
+
+<view class="wrap-b">
+	<view class="background"></view>
+
+
+	<view class="graySpace"></view>
+	<view class="graySpace"></view>
+
+		<scroll-view class="scroll-view" scroll-y="true">
+			<view class="bar-list trainer-list">
+				<view class="padding-lr margin-top">
+					<view class="flex flex-wrap">
+						<view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> 点击人名删除教练
+							</view>
+						</view>
+						<view wx:for="{{jllist}}" wx:key="*this">
+							<view class="item-avatar-xs flex align-center" bindtap='delete' data-status="2" data-openid="{{item.openid}}" data-memo_name="{{item.memo_name}}" data-nick_name="{{item.nick_name}}">
+									<image src="{{item.memo_avatarUrl}}" mode="aspectFit" wx:if="{{item.memo_avatarUrl}}" class="cu-avatar round lg"  wx:if="{{item.memo_avatarUrl}}"></image>
+                  <view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});" wx:else></view>
+									<view style="padding-left:10px;" class="picker flex align-center">
+										<text class="title">{{item.nick_name}}【{{item.memo_name}}】</text>
+									</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+
+
+      <view class="graySpace"></view>
+	    <view class="graySpace"></view>
+
+
+
+
+
+
+
+
+
+
+
+
+      <view class="bar-list trainer-list">
+				<view class="padding-lr margin-top">
+					<view class="flex flex-wrap">
+						<view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> 点击人名删除学员
+							</view>
+						</view>
+						<view wx:for="{{xylist}}" wx:key="*this">
+							<view class="item-avatar-xs flex align-center" bindtap='delete' data-status="1" data-openid="{{item.openid}}" data-memo_name="{{item.memo_name}}" data-nick_name="{{item.nick_name}}">
+									<image src="{{item.memo_avatarUrl}}" mode="aspectFit" wx:if="{{item.memo_avatarUrl}}" class="cu-avatar round lg"  wx:if="{{item.memo_avatarUrl}}"></image>
+                  <view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});" wx:else></view>
+									<view style="padding-left:10px;" class="picker flex align-center">
+										<text class="title">{{item.nick_name}}【{{item.memo_name}}】</text>
+									</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+
+    
+</view>  
+    <!-- <scroll-view class="scroll-view" scroll-y="true"> -->
+			<!-- <view class="bar-list trainer-list">
+				<view class="padding-lr margin-top">
+					<view class="flex flex-wrap">
+						<view class="cu-bar solid-bottom margin-top">
+							<view class="action">
+								<text class="cuIcon-title text-orange "></text> 点击人名删除学员
+							</view>
+						</view>
+						<view wx:for="{{xylist}}" wx:key="*this">
+							<view class="item-avatar-xs flex align-center" bindtap='delete' data-status="2" data-openid="{{item.openid}}" data-memo_name="{{item.memo_name}}" data-nick_name="{{item.nick_name}}">
+									<image src="{{item.memo_avatarUrl}}" mode="aspectFit" wx:if="{{item.memo_avatarUrl}}" class="cu-avatar round lg"  wx:if="{{item.memo_avatarUrl}}"></image>
+                  <view class="cu-avatar round lg" style="background-image:url({{item.avatarUrl}});" wx:else></view>
+									<view style="padding-left:10px;" class="picker flex align-center">
+										<text class="title">{{item.nick_name}}【{{item.memo_name}}】</text>
+									</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view> -->
+		<!-- </scroll-view> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+<text>删除教练</text>
+
+<view wx:for="{{jllist}}" wx:key="Id">
+    <button bindtap="delete" data-status="2" data-openid="{{item.openid}}" data-memo_name="{{item.memo_name}}" data-nick_name="{{item.nick_name}}">{{item.nick_name}}</button>
+</view>
+
+
+
+
+<text>删除学员</text>
+
+<view wx:for="{{xylist}}" wx:key="Id">
+    <button bindtap="delete" data-status="1" data-openid="{{item.openid}}" data-memo_name="{{item.memo_name}}" data-nick_name="{{item.nick_name}}">{{item.nick_name}}</button>
+</view> -->
